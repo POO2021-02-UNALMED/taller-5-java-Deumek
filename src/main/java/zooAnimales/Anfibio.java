@@ -10,6 +10,7 @@ public class Anfibio extends Animal {
 
     public Anfibio() {
         super(null, 0, null, null);
+        anfibios.add(this);
     }
 
     public String getColorPiel() {

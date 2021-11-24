@@ -10,6 +10,7 @@ public class Reptil extends Animal {
 
     public Reptil() {
         super(null, 0, null, null);
+        reptiles.add(this);
     }
 
     public String getColorEscamas() {

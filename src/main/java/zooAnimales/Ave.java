@@ -9,6 +9,7 @@ public class Ave extends Animal {
 
     public Ave() {
         super(null, 0, null, null);
+        aves.add(this);
     }
 
     public String getColorPlumas() {

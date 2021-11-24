@@ -10,7 +10,7 @@ public class Animal {
     private Zona zona;
 
     public Animal() {
-        
+        totalAnimales++;
     }
 
     public String getNombre() {
@@ -54,10 +54,14 @@ public class Animal {
         int totalAves = Ave.aves.size();
         int totalReptiles = Reptil.reptiles.size();
         int totalPeces = Pez.peces.size();
-        return "Mamiferos: " + totalMamiferos + "\nAves:" + totalAves + "\nReptiles:" + totalReptiles + "\nPeces:" + totalPeces;
+        int totalAnfibios = Anfibio.anfibios.size();
+        return "Mamiferos: " + totalMamiferos + "\nAves: " + totalAves + "\nReptiles: " + totalReptiles + "\nPeces: " + totalPeces + "\nAnfibios: " + totalAnfibios;
     }
 
     public String toString() {
-        return "Mi nombre es " + nombre + ", tengo una edad de " + edad + ", habito en " + habitat + " y mi genero es " + genero + ", la zona en la que me ubico es " + zona.getNombre() + ", en el " + zona.getZoo().getNombre();
+        if(zona != null) 
+            return "Mi nombre es " + nombre + ", tengo una edad de " + edad + ", habito en " + habitat + " y mi genero es " + genero + ", la zona en la que me ubico es " + zona.getNombre() + ", en el " + zona.getZoo().getNombre();
+        else
+            return "Mi nombre es " + nombre + ", tengo una edad de " + edad + ", habito en " + habitat + " y mi genero es " + genero;
     }
 }

@@ -10,6 +10,7 @@ public class Pez extends Animal {
 
     public Pez() {
         super(null, 0, null, null);
+        peces.add(this);
     }
 
     public String getColorEscamas() {
